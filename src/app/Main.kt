@@ -1,6 +1,7 @@
 package app.monitoring.display.weaterstationapp
 
 import app.display.Forecast
+import app.display.HeatIndex
 import app.display.Statistics
 
 /**
@@ -13,9 +14,9 @@ fun main(args: Array<String>) {
 	val currentConditions: CurrentConditions = CurrentConditions(weatherData)
 	val statistics: Statistics = Statistics(weatherData)
 	val forecast: Forecast = Forecast(weatherData)
+	val heatIndex: HeatIndex = HeatIndex(weatherData)
 
 	weatherData.setMeasurements(80f, 65f, 30.4f)
 	weatherData.setMeasurements(82f, 70f, 29.2f)
 	weatherData.setMeasurements(78f, 90f, 29.2f)
-
 }
